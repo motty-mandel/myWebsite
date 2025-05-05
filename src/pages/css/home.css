@@ -1,0 +1,62 @@
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.w,
+.e,
+.l,
+.c,
+.o,
+.m,
+.e2 {
+    margin: 100px 0 0 0;
+    padding: 0;
+    font-size: 5rem;
+    letter-spacing: 0.4rem;
+    font-family: Gabriola, 'Courier New', Courier, monospace;
+    animation: wave 2.5s forwards ease-in-out infinite;
+}
+
+.w {
+    animation-delay: 0s;
+}
+
+.e {
+    animation-delay: 0.3s;
+}
+
+.l {
+    animation-delay: 0.6s;
+}
+
+.c {
+    animation-delay: 0.9s;
+}
+
+.o {
+    animation-delay: 1.2s;
+}
+
+.m {
+    animation-delay: 1.5s;
+}
+
+.e2 {
+    animation-delay: 2s;
+}
+
+@keyframes wave {
+    0% {
+        transform: translate(0, 0px);
+    }
+    25% {
+        transform: translate(0, -20px)
+    }
+    75% {
+        transform: translate(0, 0px);
+    }
+    100% {
+        transform: translate(0, 0px);
+    }
+}
