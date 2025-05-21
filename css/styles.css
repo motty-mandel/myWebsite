@@ -1,0 +1,40 @@
+body {
+    background-color: rgb(54, 54, 54);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(126, 126, 126);
+    margin: 0;
+    padding: 0;
+}
+
+.header .logo {
+    margin: 10px 0 0 50px;
+}
+
+.header .menu {
+    margin: 0px 40px 0 0;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.header .menu .line {
+    height: 5px;
+    width: 30px;
+    background-color: black;
+    margin: 5px 0;
+    padding: 0;
+    
+    transition: ease-in-out 500ms;
+}
+
+.header .menu:active .line {
+    transform: translate(30px, 0px);
+}
