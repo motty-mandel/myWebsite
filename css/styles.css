@@ -15,8 +15,27 @@ body {
     padding: 0;
 }
 
-.header .logo {
-    margin: 10px 0 0 50px;
+.header .logo img {
+    border-radius: 50%;
+    height: 150px;
+}
+
+.header .links {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.header .links * {
+    margin: 10px 10px 10px 50px;
+    font-size: xx-large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    overflow: hidden;
+}
+
+.header .links * p {
+    transform: translate(150px, 0px);
+    transition: ease-in-out 300ms;
 }
 
 .header .menu {
@@ -31,10 +50,13 @@ body {
     background-color: black;
     margin: 5px 0;
     padding: 0;
-    
-    transition: ease-in-out 500ms;
+    transition: ease-in-out 100ms;
 }
 
-.header .menu:active .line {
-    transform: translate(30px, 0px);
+.header .menu.active .line {
+    transform: translate(35px, 0px);
+}
+
+.header .links.active * p {
+    transform: translate(0px, 0px);
 }
