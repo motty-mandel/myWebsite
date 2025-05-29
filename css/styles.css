@@ -2,55 +2,64 @@ body {
     background-color: rgb(54, 54, 54);
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: content-box;
 }
 
 .header {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
-    background-color: rgb(126, 126, 126);
+    background: linear-gradient( rgb(81, 81, 81), rgb(187, 187, 187),  rgb(81, 81, 81));
     margin: 0;
     padding: 0;
-}
-
-.header .logo img {
-    border-radius: 50%;
-    height: 150px;
 }
 
 .header .links {
     display: flex;
     flex-direction: row;
-
+    margin: 0px auto 0px 0;
 }
 
 .header .links * {
-    margin: 10px 10px 10px 50px;
+    margin: 0 10px;
     font-size: xx-large;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     overflow: hidden;
 }
 
-.header .links * p {
+.header .links * a p{
     transform: translate(150px, 0px);
     transition: ease-in-out 300ms;
+    color: black;
+}
+
+.header .links * a {
+    text-decoration: none;
 }
 
 .header .menu {
-    margin: 0px 40px 0 0;
+    margin-left: auto;
+    margin-right: 50px;
     cursor: pointer;
     overflow: hidden;
 }
 
 .header .menu .line {
-    height: 5px;
+    height: 4px;
     width: 30px;
     background-color: black;
     margin: 5px 0;
     padding: 0;
     transition: ease-in-out 100ms;
+}
+
+.header .menu .line:first-child {
+    border-radius: 10px 10px 0 0;
+}
+
+
+.header .menu .line:last-child {
+    border-radius: 0 0 10px 10px;
 }
 
 .header .menu.active .line {
@@ -59,4 +68,52 @@ body {
 
 .header .links.active * p {
     transform: translate(0px, 0px);
+}
+
+
+
+
+
+.windows {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.windows > div {
+    padding: 0;
+    height: 300px;
+    width: 300px;
+    background-color: red;
+    z-index: 1;
+}
+
+.windows .left-glass,
+.windows .middle-glass,
+.windows .right-glass {
+    position: absolute;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1),
+     rgba(255, 255, 255, 0));
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    z-index: 2;
+    transition: ease-in-out 500px;
+    border: solid 5px black;
+}
+
+.windows .left-glass {
+    left: 92px;     
+}
+
+.windows .right-glass {
+    left: 884px;
+}
+
+.windows .left-glass.active,
+.windows .middle-glass.active,
+.windows .right-glass.active {
+    transform: translate(0px, -300px);
 }
