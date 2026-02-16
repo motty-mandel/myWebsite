@@ -1,119 +1,47 @@
 body {
-    background-color: rgb(54, 54, 54);
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: content-box;
+    background-color: bisque;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.header {
+.header-con {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    background: linear-gradient( rgb(81, 81, 81), rgb(187, 187, 187),  rgb(81, 81, 81));
-    margin: 0;
-    padding: 0;
+    justify-content: center;
+    padding: 10px;
 }
 
-.header .links {
-    display: flex;
-    flex-direction: row;
-    margin: 0px auto 0px 0;
+header {
+    width: 95%;
+    height: 100px;
+    background-color: bisque;
+    border-radius: 20px;
+    box-shadow: inset 2px 2px 5px rgb(230, 230, 230), inset -2px -2px 3px rgb(110, 110, 110), 2px 2px 8px rgb(65, 65, 65);
 }
 
-.header .links * {
-    margin: 0 10px;
-    font-size: xx-large;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    overflow: hidden;
+header h1 {
+    text-shadow:  2px 2px 2px white;
 }
 
-.header .links * a p{
-    transform: translate(150px, 0px);
-    transition: ease-in-out 300ms;
-    color: black;
-}
-
-.header .links * a {
-    text-decoration: none;
-}
-
-.header .menu {
-    margin-left: auto;
-    margin-right: 50px;
-    cursor: pointer;
-    overflow: hidden;
-}
-
-.header .menu .line {
-    height: 4px;
-    width: 30px;
-    background-color: black;
-    margin: 5px 0;
-    padding: 0;
-    transition: ease-in-out 100ms;
-}
-
-.header .menu .line:first-child {
-    border-radius: 10px 10px 0 0;
-}
-
-
-.header .menu .line:last-child {
-    border-radius: 0 0 10px 10px;
-}
-
-.header .menu.active .line {
-    transform: translate(35px, 0px);
-}
-
-.header .links.active * p {
-    transform: translate(0px, 0px);
-}
-
-
-
-
-
-.windows {
+.main-bod {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    margin-top: 40px;
-    position: relative;
-    overflow: hidden;
+    margin-top: 50px;
 }
 
-.windows > div {
-    padding: 0;
-    height: 300px;
-    width: 300px;
-    background-color: red;
-    z-index: 1;
+.main-bod div {
+    height: 250px;
+    width: 250px;
+    background-color: bisque;
+    border-radius: 20px;
+    box-shadow: inset 2px 2px 5px rgb(230, 230, 230), inset -2px -2px 5px rgb(110, 110, 110), 2px 2px 8px rgb(65, 65, 65);
+    transition: ease-in-out 200ms;
 }
 
-.windows .left-glass,
-.windows .middle-glass,
-.windows .right-glass {
-    position: absolute;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1),
-     rgba(255, 255, 255, 0));
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    z-index: 2;
-    transition: ease-in-out 500px;
-    border: solid 5px black;
-}
-
-.windows .left-glass {
-    left: 92px;     
-}
-
-.windows .right-glass {
-    left: 884px;
-}
-
-.windows .left-glass.active,
-.windows .middle-glass.active,
-.windows .right-glass.active {
-    transform: translate(0px, -300px);
+.main-bod div:hover {
+    box-shadow: inset 2px 2px 3px rgb(230, 230, 230), inset -2px -2px 3px rgb(110, 110, 110), 6px 6px 15px rgb(65, 65, 65);
+    transition: ease-in-out 200ms;
+    transform: scale(1.01);
 }
